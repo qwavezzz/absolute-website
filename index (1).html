@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF‑8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute — Gothic Streetwear Brand</title>
+    <!-- Google Fonts: gothic display for the logo and modern sans for text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN. This play CDN lets us use Tailwind utility classes without a build step. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Extend the default Tailwind palette with colours suited to our dark, gothic aesthetic.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0e0e0e', // deep black used for backgrounds
+              accent: '#7f1d1d', // dark red accent for call‑to‑action elements
+            },
+            fontFamily: {
+              logo: ['"Pirata One"', 'cursive'],
+              sans: ['"Montserrat"', 'sans‑serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Fallback fonts for environments where Tailwind might not load quickly */
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-primary text-gray-200 antialiased">
+    <header class="px-6 pt-10 pb-6 flex flex-col items-center text-center">
+      <!-- Temporary logo placeholder rendered with a gothic typeface -->
+      <div class="font-logo text-5xl md:text-6xl text-white tracking-wider select-none">
+        Absolute
+      </div>
+      <!-- Brand description. We removed the triad of terms to avoid cliché and let the description speak for itself. -->
+      <p class="mt-6 max-w-2xl text-gray-400 leading-relaxed">
+        Absolute — бренд для тех, кто живёт на грани. Мы соединяем элементы
+        готики, милитари и уличной культуры, создавая одежду для свободных духом
+        людей, которые не боятся выделяться и идти своим путём.
+      </p>
+      <p class="mt-3 max-w-2xl text-gray-500 leading-relaxed">
+        Наши коллекции — это минимализм и чёткие линии, вдохновлённые духом
+        независимости. Каждая вещь сделана с вниманием к деталям, чтобы вы
+        чувствовали себя уверенно в любой ситуации — от улиц мегаполиса до
+        вечерних мероприятий.
+      </p>
+    </header>
+    <main class="px-6 md:px-12">
+      <!-- Gallery grid. Responsive columns adapt from one on small screens to three on larger displays. -->
+      <section id="gallery" class="mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Product card: hoodie -->
+          <div
+            class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group"
+            data-name="Худи Absolute"
+            data-description="Тёплая худи с глубоким капюшоном. Идеальна для прохладных вечеров и повседневного стиля."
+            data-composition="100% хлопок"
+            data-sizes="S, M, L, XL"
+            data-price="4500"
+            data-image="oladimeji-odunsi-aNj8Hvbrss8-unsplash.jpg"
+          >
+            <img
+              src="oladimeji-odunsi-aNj8Hvbrss8-unsplash.jpg"
+              alt="Худи Absolute"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span class="absolute top-2 left-2 bg-accent text-white text-xs font-semibold px-2 py-1 rounded">
+              ₽4 500
+            </span>
+          </div>
+          <!-- Product card: sweatshirt -->
+          <div
+            class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group"
+            data-name="Толстовка Absolute"
+            data-description="Толстовка свободного кроя, сочетающая комфорт и стиль."
+            data-composition="80% хлопок, 20% полиэстер"
+            data-sizes="S, M, L"
+            data-price="4000"
+            data-image="dave-smith-epNphIjdF84-unsplash.jpg"
+          >
+            <img
+              src="dave-smith-epNphIjdF84-unsplash.jpg"
+              alt="Толстовка Absolute"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span class="absolute top-2 left-2 bg-accent text-white text-xs font-semibold px-2 py-1 rounded">
+              ₽4 000
+            </span>
+          </div>
+          <!-- Product card: jacket -->
+          <div
+            class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group"
+            data-name="Куртка Absolute"
+            data-description="Лёгкая куртка с принтом, которая защитит от ветра и подчеркнёт ваш образ."
+            data-composition="100% полиэстер"
+            data-sizes="M, L, XL"
+            data-price="5500"
+            data-image="jc-gellidon-OGy5tojr7x8-unsplash.jpg"
+          >
+            <img
+              src="jc-gellidon-OGy5tojr7x8-unsplash.jpg"
+              alt="Куртка Absolute"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span class="absolute top-2 left-2 bg-accent text-white text-xs font-semibold px-2 py-1 rounded">
+              ₽5 500
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- Call to action section with a prominent button linking to Telegram -->
+      <section class="mt-12 flex justify-center">
+        <a
+          href="https://t.me/AbsoluteBrand"
+          target="_blank"
+          rel="noopener"
+          class="bg-accent hover:bg-red-700 text-white py-3 px-10 rounded-full text-lg font-semibold transition-colors duration-300"
+        >
+          Оформить заказ через Telegram
+        </a>
+      </section>
+    </main>
+    <footer class="mt-16 mb-8 text-center text-xs text-gray-600">
+      © 2025 Absolute. Все права защищены.
+    </footer>
+
+    <!-- Product details modal (hidden by default). Clicking on a card populates and displays this overlay. -->
+    <div
+      id="modal-backdrop"
+      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50"
+    >
+      <div
+        id="modal"
+        class="relative bg-primary p-6 rounded-lg shadow-2xl max-w-lg w-11/12 overflow-y-auto"
+      >
+        <!-- Close button -->
+        <button
+          id="modal-close"
+          class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl leading-none"
+          aria-label="Закрыть"
+        >
+          ×
+        </button>
+        <!-- Large product image -->
+        <img
+          id="modal-image"
+          src=""
+          alt=""
+          class="w-full h-64 object-cover mb-4 rounded"
+        />
+        <!-- Product name -->
+        <h3 id="modal-name" class="text-2xl font-logo text-white mb-2"></h3>
+        <!-- Product description -->
+        <p id="modal-description" class="text-gray-300 mb-2"></p>
+        <!-- Composition -->
+        <p id="modal-composition" class="text-gray-400 mb-1"></p>
+        <!-- Available sizes -->
+        <p id="modal-sizes" class="text-gray-400 mb-3"></p>
+        <!-- Size chart -->
+        <table
+          class="w-full text-left text-gray-500 mb-3 border-collapse text-sm"
+        >
+          <thead>
+            <tr>
+              <th class="py-1 pr-4 font-semibold">Размер</th>
+              <th class="py-1">Обхват груди (см)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="py-1 pr-4">S</td><td>44–46</td></tr>
+            <tr><td class="py-1 pr-4">M</td><td>46–48</td></tr>
+            <tr><td class="py-1 pr-4">L</td><td>48–50</td></tr>
+            <tr><td class="py-1 pr-4">XL</td><td>50–52</td></tr>
+          </tbody>
+        </table>
+        <!-- Price -->
+        <p
+          id="modal-price"
+          class="text-xl font-semibold text-white mb-4"
+        ></p>
+        <!-- Order button inside modal -->
+        <button
+          id="modal-order"
+          class="bg-accent hover:bg-red-700 text-white py-2 px-6 rounded transition-colors duration-300"
+        >
+          Заказать через Telegram
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Attach click listeners to each product card to populate and show the modal
+      document.querySelectorAll('#gallery div[data-name]').forEach((card) => {
+        card.addEventListener('click', () => {
+          const backdrop = document.getElementById('modal-backdrop');
+          document.getElementById('modal-image').src = card.dataset.image;
+          document.getElementById('modal-name').textContent = card.dataset.name;
+          document.getElementById('modal-description').textContent = card.dataset.description;
+          document.getElementById('modal-composition').textContent = 'Состав: ' + card.dataset.composition;
+          document.getElementById('modal-sizes').textContent = 'Доступные размеры: ' + card.dataset.sizes;
+          document.getElementById('modal-price').textContent = 'Цена: ₽' + card.dataset.price;
+          backdrop.classList.remove('hidden');
+        });
+      });
+      // Close modal when clicking on the close button
+      document.getElementById('modal-close').addEventListener('click', () => {
+        document.getElementById('modal-backdrop').classList.add('hidden');
+      });
+      // Close modal when clicking outside the modal content
+      document.getElementById('modal-backdrop').addEventListener('click', (e) => {
+        if (e.target.id === 'modal-backdrop') {
+          e.currentTarget.classList.add('hidden');
+        }
+      });
+      // Handle order button: open Telegram link in a new tab
+      document.getElementById('modal-order').addEventListener('click', () => {
+        window.open('https://t.me/AbsoluteBrand', '_blank');
+      });
+    </script>
+  </body>
+</html>
